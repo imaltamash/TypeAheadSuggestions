@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.Typeahead;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
