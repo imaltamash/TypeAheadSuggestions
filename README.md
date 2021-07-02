@@ -15,7 +15,7 @@ Garbage Collection automatically determine what memory is no longer being used b
 
 Data Structure Used
 
-Blocking Queue: queue that blocks when you try to dequeue from it and the queue is empty, or if you try to enqueue items to it and the queue is already full. We have used Blocking queue here to support concurrency in execution.
+Blocking Queue: queue that blocks when you try to dequeue from it and the queue is empty, or if you try to enqueue items to it and the queue is already full. We have used Blocking queue here to support concurrency in execution and avoid any halt in processing.
 
 Graph: non-linear data structure consisting of nodes and edges. We have used graph here to store the references.
 
