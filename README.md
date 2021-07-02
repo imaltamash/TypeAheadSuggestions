@@ -13,17 +13,22 @@ For example if the Trie store {“abc”, “abcd”, “aa”, “abbbaba”} and the User type
 
 Garbage Collection automatically determine what memory is no longer being used by a Java application and to recycle this memory for other uses.
 
+Data Structure Used
+
+Blocking Queue: queue that blocks when you try to dequeue from it and the queue is empty, or if you try to enqueue items to it and the queue is already full. We have used Blocking queue here to support concurrency in execution.
+
+Graph: non-linear data structure consisting of nodes and edges. We have used graph here to store the references.
+
 * Garbage.java: Entry point of application, call method get(), release() and gc() of GarbageCollector class to create the reference, release the reference and to do the clean-up process respectively.
 
 * GarbageCollector.java: It has createReferences method that will create the reference for object in the graph(add the object in graph ) and return the reference object. It has gc() and release method to release the reference and to do the clean-up process.
 
-* GarbageCollectorTask: this will traverse through graph and identify unused references. It also push collected objects(unused references) to finalize queue, which is taken care by FinalizeTask.
+* GarbageCollectorTask: this will traverse through graph and identify unused references. It also push collected objects(unused references) to finalize queue, which is taken care by FinalizeTask. It has logic for mark & sweep algotithm, It first marks the objects to be garbage-collected in the memory space and then clears the marked objects
 
 * FinalizeTask: FinalizeTask calls the finalize method on the  objects pushed to finalize queue by GarbageCollectorTask class.
 
 * Reference: Implementation of graph.
 
-* 
 
 
 
