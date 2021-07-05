@@ -1,8 +1,8 @@
-package com.mycompany.app.garbagecollector;
+package com.accolite.apps.garbagecollector;
 
-import com.mycompany.app.garbagecollector.model.C;
-import com.mycompany.app.garbagecollector.model.College;
-import com.mycompany.app.garbagecollector.model.Student;
+import com.accolite.apps.garbagecollector.model.C;
+import com.accolite.apps.garbagecollector.model.College;
+import com.accolite.apps.garbagecollector.model.Student;
 
 
 public class Garbage {

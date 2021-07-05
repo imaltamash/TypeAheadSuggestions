@@ -1,8 +1,6 @@
-package com.mycompany.app.Typeahead;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+package com.accolite.apps.Typeahead;
+
+import java.util.*;
 
 public class TypeAheader {
 
@@ -89,13 +87,24 @@ public class TypeAheader {
 		return list;
 	}
 
+	public static void printList(List<String> result, int top) {
+		for (int i = 0; i < top; i++) {
+			System.out.print(result.get(i) + " ,");
+		}
+	}
+
 	public static void main(String[] args) {
+		int top = 5;
 		List<String> words = List.of("hello", "dog", "hell", "cat", "a", "hel", "help", "helps", "helping");
 		TypeAheader trie = new TypeAheader(words);
 		String toGuess = "hel";
 		System.out.println("Input String: " + toGuess);
-		System.out.print("Options Available: ");
-		System.out.println(trie.suggest(toGuess));
+		List<String> result = trie.suggest(toGuess);
+		Collections.sort(result, Collections.reverseOrder());
+		System.out.print("Top 5 options Available in Descending order: ");
+		printList(result, top);
+		System.out.println();
+		System.out.println("Frequency: " + result.size());
 	}
 
 }

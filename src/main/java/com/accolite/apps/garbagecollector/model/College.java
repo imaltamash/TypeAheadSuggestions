@@ -1,4 +1,4 @@
-package com.mycompany.app.garbagecollector.model;
+package com.accolite.apps.garbagecollector.model;
 
 public class College {
 	private Student e;

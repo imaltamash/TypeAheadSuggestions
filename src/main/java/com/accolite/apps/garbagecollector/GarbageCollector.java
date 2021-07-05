@@ -1,4 +1,4 @@
-package com.mycompany.app.garbagecollector;
+package com.accolite.apps.garbagecollector;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
